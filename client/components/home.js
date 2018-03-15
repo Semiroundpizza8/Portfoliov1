@@ -1,33 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import P5Wrapper from 'react-p5-wrapper';
 import circles from './sketches/circles';
 import sketch from './sketches/sketch';
 /*------------
   COMPONENT
  ------------*/
 export const Home = (props) => {
-  let style = {
-    position: 'absolute',
-    top: '0px',
-    left: '0px',
-    zIndex: '-3',
-  }
-  let headerStyle = {
-    zIndex: 20
-  }
   return (
     <div>
-      <div id="HeaderSketch" style={style}>
-        <P5Wrapper sketch={sketch} />
-      </div>
-      <div id="HeaderText" style={headerStyle}>
+      <div id="HeaderText" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', width: '66vw', height: '33vw', margin: 'auto', backgroundColor: 'red'}}>
         <h1>Benjamin Odisho</h1>
-        <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </ul>
+        <p>About</p>
+        <p>Projects</p>
+        <p>Contact</p>
       </div>
     </div>
   )
